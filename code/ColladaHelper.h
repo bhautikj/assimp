@@ -363,6 +363,12 @@ enum PrimitiveType
 	Prim_Polygon
 };
 
+enum ControllerType
+{
+	Controller_Morph,
+	Controller_Skin
+};
+
 /** A skeleton controller to deform a mesh with the use of joints */
 struct Controller
 {
@@ -388,6 +394,14 @@ struct Controller
 
 	// JointIndex-WeightIndex pairs for all vertices
 	std::vector< std::pair<size_t, size_t> > mWeights;
+
+	// accessor URL for morph targets
+	std::string mMorphTargetSource;
+  
+	// accessor URL for morph weights
+	std::string mMorphWeightSource;
+
+  ControllerType controllerType;
 };
 
 /** A collada material. Pretty much the only member is a reference to an effect. */

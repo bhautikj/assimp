@@ -98,6 +98,9 @@ protected:
 	/** Reads the joint weights for the given controller */
 	void ReadControllerWeights( Collada::Controller& pController);
 
+	/** Reads the morph targets for the given controller */
+	void ReadControllerTargets( Collada::Controller& pController);
+  
 	/** Reads the image library contents */
 	void ReadImageLibrary();
 

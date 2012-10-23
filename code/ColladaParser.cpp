@@ -481,8 +481,9 @@ void ColladaParser::ReadController( Collada::Controller& pController)
 			// two types of controllers: "skin" and "morph". Only the first one is relevant, we skip the other
 			if( IsElement( "morph"))
 			{
-				// should skip everything inside, so there's no danger of catching elements inbetween
-				SkipElement();
+				int sourceIndex = GetAttribute( "source");
+				pController.mMeshId = mReader->getAttributeValue( sourceIndex) + 1;
+				pController.controllerType = Collada::Controller_Morph;
 			} 
 			else if( IsElement( "skin"))
 			{
@@ -490,6 +491,7 @@ void ColladaParser::ReadController( Collada::Controller& pController)
 				// controller, but I refuse to implement every bullshit idea they've come up with
 				int sourceIndex = GetAttribute( "source");
 				pController.mMeshId = mReader->getAttributeValue( sourceIndex) + 1;
+				pController.controllerType = Collada::Controller_Skin;
 			} 
 			else if( IsElement( "bind_shape_matrix"))
 			{
@@ -512,6 +514,11 @@ void ColladaParser::ReadController( Collada::Controller& pController)
 				// data array - we have specialists to handle this
 				ReadSource();
 			} 
+			else if ( IsElement("targets"))
+			{
+				//morph targets
+				ReadControllerTargets(pController);
+			}
 			else if( IsElement( "joints"))
 			{
 				ReadControllerJoints( pController);
@@ -528,11 +535,68 @@ void ColladaParser::ReadController( Collada::Controller& pController)
 		}
 		else if( mReader->getNodeType() == irr::io::EXN_ELEMENT_END) 
 		{
-			if( strcmp( mReader->getNodeName(), "controller") == 0)
+			bool isController = ( strcmp( mReader->getNodeName(), "controller") == 0);
+			bool isNotSkin = ( strcmp( mReader->getNodeName(), "skin") != 0 );
+			bool isNotMorph = ( strcmp( mReader->getNodeName(), "morph") != 0 );
+			
+			if(isController)
 				break;
-			else if( strcmp( mReader->getNodeName(), "skin") != 0)
+			else if(isNotSkin && isNotMorph)
+			{
 				ThrowException( "Expected end of \"controller\" element.");
 		}
+
+		}
+	}
+}
+
+// ------------------------------------------------------------------------------------------------
+// Reads the morph definitions for the given controller
+void ColladaParser::ReadControllerTargets( Collada::Controller& pController)
+{
+  std::cout<<"READING MORPH CONTROLLER TARGETS"<<std::endl;
+  while( mReader->read())
+  {
+    if( mReader->getNodeType() == irr::io::EXN_ELEMENT) 
+    {
+      // Input channels for morph data. Two possible semantics: "MORPH_TARGET" and "MORPH_WEIGHT"
+      if( IsElement( "input"))
+      {
+        int indexSemantic = GetAttribute( "semantic");
+        const char* attrSemantic = mReader->getAttributeValue( indexSemantic);
+        int indexSource = GetAttribute( "source");
+        const char* attrSource = mReader->getAttributeValue( indexSource);
+
+        // local URLS always start with a '#'. We don't support global URLs
+        if( attrSource[0] != '#')
+          ThrowException( boost::str( boost::format( "Unsupported URL format in \"%s\"") % attrSource));
+        attrSource++;
+
+        // parse source URL to corresponding source
+        if( strcmp( attrSemantic, "MORPH_TARGET") == 0)
+        {
+          pController.mMorphTargetSource = attrSource;
+        }
+        else if( strcmp( attrSemantic, "MORPH_WEIGHT") == 0)
+        {
+          pController.mMorphWeightSource = attrSource;
+        }
+        else
+        {
+          ThrowException( boost::str( boost::format( "Unknown semantic \"%s\" in morph data") % attrSemantic));
+        }
+        // skip inner data, if present
+        if( !mReader->isEmptyElement())
+          SkipElement();
+      }
+    }
+    else if( mReader->getNodeType() == irr::io::EXN_ELEMENT_END) 
+    {
+      if( strcmp( mReader->getNodeName(), "targets") != 0)
+        ThrowException( "Expected end of \"targets\" element.");
+
+      break;
+    }
 	}
 }
 
