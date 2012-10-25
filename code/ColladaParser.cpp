@@ -483,7 +483,6 @@ void ColladaParser::ReadController( Collada::Controller& pController)
 			{
 				int sourceIndex = GetAttribute( "source");
 				pController.mMeshId = mReader->getAttributeValue( sourceIndex) + 1;
-				pController.controllerType = Collada::Controller_Morph;
 			} 
 			else if( IsElement( "skin"))
 			{
@@ -491,7 +490,6 @@ void ColladaParser::ReadController( Collada::Controller& pController)
 				// controller, but I refuse to implement every bullshit idea they've come up with
 				int sourceIndex = GetAttribute( "source");
 				pController.mMeshId = mReader->getAttributeValue( sourceIndex) + 1;
-				pController.controllerType = Collada::Controller_Skin;
 			} 
 			else if( IsElement( "bind_shape_matrix"))
 			{
@@ -544,7 +542,7 @@ void ColladaParser::ReadController( Collada::Controller& pController)
 			else if(isNotSkin && isNotMorph)
 			{
 				ThrowException( "Expected end of \"controller\" element.");
-		}
+      }
 
 		}
 	}
@@ -554,7 +552,6 @@ void ColladaParser::ReadController( Collada::Controller& pController)
 // Reads the morph definitions for the given controller
 void ColladaParser::ReadControllerTargets( Collada::Controller& pController)
 {
-  std::cout<<"READING MORPH CONTROLLER TARGETS"<<std::endl;
   while( mReader->read())
   {
     if( mReader->getNodeType() == irr::io::EXN_ELEMENT) 

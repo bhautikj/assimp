@@ -501,7 +501,6 @@ void ColladaLoader::BuildMeshesForNode( const ColladaParser& pParser, const Coll
 				mMeshIndexByID[index] = mMeshes.size();
 				mMeshes.push_back( dstMesh);
 				vertexStart += dstMesh->mNumVertices; faceStart += submesh.mNumFaces;
-
 				// assign the material index
 				dstMesh->mMaterialIndex = matIdx;
         dstMesh->mName = mid.mMeshOrController;			
@@ -604,8 +603,6 @@ aiMesh* ColladaLoader::CreateMesh( const ColladaParser& pParser, const Collada::
 	// create bones if given
 	if( pSrcController)
 	{
-		if (pSrcController->controllerType == Collada::Controller_Skin)
-    		{
 		// refuse if the vertex count does not match
 //		if( pSrcController->mWeightCounts.size() != dstMesh->mNumVertices)
 //			throw DeadlyImportError( "Joint Controller vertex count does not match mesh vertex count");
@@ -746,10 +743,9 @@ aiMesh* ColladaLoader::CreateMesh( const ColladaParser& pParser, const Collada::
 			// and insert bone
 			dstMesh->mBones[boneCount++] = bone;
 		}
-	}
-	else/* if (pSrcController->controllerType == Collada::Controller_Morph)*/
-	{
-      std::cout<<"FOUND MORPH CONTROLLER"<<std::endl;
+
+		if (pSrcController->mMorphTargetSource != "")
+    {
       const Collada::Accessor& morphTargetAcc = pParser.ResolveLibraryReference( pParser.mAccessorLibrary, pSrcController->mMorphTargetSource);
       const Collada::Data& morphTargets = pParser.ResolveLibraryReference( pParser.mDataLibrary, morphTargetAcc.mSource);
 
@@ -767,12 +763,10 @@ aiMesh* ColladaLoader::CreateMesh( const ColladaParser& pParser, const Collada::
       {
         float wt = ReadFloat( morphWeightAcc, morphWeights, i, 0);
         std::string morphTargetMeshName = morphTargets.mStrings[i];
-        std::cout<<morphTargetMeshName<< " " << wt << std::endl;
         //find morph target mesh
         ColladaParser::MeshLibrary::const_iterator srcMeshIt = pParser.mMeshLibrary.find( morphTargetMeshName );
         if( srcMeshIt == pParser.mMeshLibrary.end())
         {
-            std::cout<<"CANNOT LOAD MORPH TARGET MESH: "<<morphTargetMeshName<<std::endl;
             continue;
         }
         const Collada::Mesh* srcMesh = srcMeshIt->second;
@@ -783,25 +777,6 @@ aiMesh* ColladaLoader::CreateMesh( const ColladaParser& pParser, const Collada::
         std::copy( srcMesh->mPositions.begin() + pStartVertex, srcMesh->mPositions.begin() + 
           pStartVertex + numVertices, animMesh->mVertices);
 
-        /*
-        int nv = srcMesh->mPositions.size();
-        int ndiff = 0;
-        for (int i=0;i<nv;i++)
-        {
-          aiVector3D origPos  = pSrcMesh->mPositions[i];
-          aiVector3D morphPos = animMesh->mVertices[i];
-          float diffx = morphPos.x - origPos.x;
-          float diffy = morphPos.y - origPos.y;
-          float diffz = morphPos.z - origPos.z;
-          float len = sqrt(diffx*diffx + diffy*diffy + diffz*diffz);
-          if (len>1e-10)
-              ndiff++;
-        }
-        
-        if (nv!=0)
-          std::cout<<morphTargetMeshName<<" morph verts: "<<ndiff<<"/"<<nv<<std::endl;
-        */
-        
         animMesh->mNormals = new aiVector3D[numVertices];
         if( srcMesh->mNormals.size() >= pStartVertex + numVertices)
         {
@@ -809,9 +784,10 @@ aiMesh* ColladaLoader::CreateMesh( const ColladaParser& pParser, const Collada::
             pStartVertex + numVertices, animMesh->mNormals);
         }
         dstMesh->mAnimMeshes[i] = animMesh;
-	}
-    	}
-	}
+      }
+    }
+    
+	}// if pSrcController
 
 	return dstMesh;
 }
@@ -827,6 +803,11 @@ void ColladaLoader::StoreSceneMeshes( aiScene* pScene)
 		std::copy( mMeshes.begin(), mMeshes.end(), pScene->mMeshes);
 		mMeshes.clear();
 	}
+	
+	for (int i = 0; i < pScene->mNumMeshes; i++)
+  {
+    aiMesh* mesh =  pScene->mMeshes[i];
+  }
 }
 
 // ------------------------------------------------------------------------------------------------
