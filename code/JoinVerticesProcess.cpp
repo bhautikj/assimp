@@ -126,6 +126,10 @@ int JoinVerticesProcess::ProcessMesh( aiMesh* pMesh, unsigned int meshIndex)
 	// We'll never have more vertices afterwards.
 	std::vector<Vertex> uniqueVertices;
 	uniqueVertices.reserve( pMesh->mNumVertices);
+  
+  // Reverse lookup
+  std::vector<int> reverseLookup;
+  reverseLookup.reserve( pMesh->mNumVertices);
 
 	// For each vertex the index of the vertex it was replaced by.
 	// Since the maximal number of vertices is 2^31-1, the most significand bit can be used to mark
@@ -266,6 +270,7 @@ int JoinVerticesProcess::ProcessMesh( aiMesh* pMesh, unsigned int meshIndex)
 		{
 			// no unique vertex matches it upto now -> so add it
 			replaceIndex[a] = (unsigned int)uniqueVertices.size();
+      reverseLookup.push_back(a);
 			uniqueVertices.push_back( v);
 		}
 	}
@@ -408,6 +413,31 @@ int JoinVerticesProcess::ProcessMesh( aiMesh* pMesh, unsigned int meshIndex)
 			DefaultLogger::get()->warn("Removing bone -> no weights remaining");
 		}
 	}
+	
+	// adjust morph channels
+	for ( int a = 0; a < (int)pMesh->mNumAnimMeshes; a++)
+  {
+    //std::cout<<"Adjusting mesh "<<pMesh->mName.data<< " controller "<<a<<" down to "<<pMesh->mNumVertices<<std::endl;
+    aiAnimMesh* animMesh = pMesh->mAnimMeshes[a];
+    animMesh->mNumVertices =  pMesh->mNumVertices;
+
+    aiVector3D* newVerts = new aiVector3D[pMesh->mNumVertices];
+    aiVector3D* oldVerts = animMesh->mVertices;
+    for (int b = 0; b < pMesh->mNumVertices; b++)
+      newVerts[b] = animMesh->mVertices[reverseLookup[b]] ;
+
+    delete [] animMesh->mVertices;
+    animMesh->mVertices = newVerts;
+
+    aiVector3D* newNormals = new aiVector3D[pMesh->mNumVertices];
+    aiVector3D* oldNormals = animMesh->mNormals;
+    for (int b = 0; b < pMesh->mNumVertices; b++)
+      newNormals[b] = animMesh->mVertices[reverseLookup[b]] ;
+    
+    delete [] animMesh->mNormals;
+    animMesh->mNormals = newNormals;
+  }
+
 	return pMesh->mNumVertices;
 }
 
