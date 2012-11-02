@@ -783,6 +783,9 @@ aiMesh* ColladaLoader::CreateMesh( const ColladaParser& pParser, const Collada::
           std::copy( pSrcMesh->mNormals.begin() + pStartVertex, pSrcMesh->mNormals.begin() +
             pStartVertex + numVertices, animMesh->mNormals);
         }
+        
+        animMesh->mName = morphTargetMeshName;
+
         dstMesh->mAnimMeshes[i] = animMesh;
       }
     }
