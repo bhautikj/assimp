@@ -5,7 +5,7 @@ osx
 --
 mkdir build
 cd build
-cmake -DENABLE_BOOST_WORKAROUND=ON -DBUILD_STATIC_LIB=ON \
+cmake -DASSIMP_ENABLE_BOOST_WORKAROUND=ON -DASSIMP_BUILD_STATIC_LIB=ON \
     -D"CMAKE_OSX_ARCHITECTURES=i386;x86_64" \
     -DCMAKE_CXX_FLAGS="-fvisibility-inlines-hidden" ..
 make
