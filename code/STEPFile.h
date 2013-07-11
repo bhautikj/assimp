@@ -195,21 +195,13 @@ namespace STEP {
 			// conversion support.
 			template <typename T>
 			const T& ResolveSelect(const DB& db) const {
-			#ifdef __clang__
 				return Couple<T>(db).MustGetObject(To<EXPRESS::ENTITY>())->template To<T>();
-			#else
-				return Couple<T>(db).MustGetObject(To<EXPRESS::ENTITY>())->To<T>();
-			#endif
 			}
 
 			template <typename T>
 			const T* ResolveSelectPtr(const DB& db) const {
 				const EXPRESS::ENTITY* e = ToPtr<EXPRESS::ENTITY>();
-				#ifdef __clang__
 				return e?Couple<T>(db).MustGetObject(*e)->template ToPtr<T>():(const T*)0;
-				#else
-				return e?Couple<T>(db).MustGetObject(*e)->ToPtr<T>():(const T*)0;
-				#endif
 			}
 
 		public:

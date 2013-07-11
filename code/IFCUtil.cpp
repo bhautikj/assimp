@@ -59,6 +59,9 @@ void TempOpening::Transform(const IfcMatrix4& mat)
 	if(profileMesh) {
 		profileMesh->Transform(mat);
 	}
+	if(profileMesh2D) {
+		profileMesh2D->Transform(mat);
+	}
 	extrusionDir *= IfcMatrix3(mat);
 }
 
@@ -142,13 +145,8 @@ void TempMesh::RemoveDegenerates()
 	bool drop = false;
 	size_t inor = 0;
 
-	//#ifdef __clang__
 	std::vector<IfcVector3>::iterator vit = verts.begin();
 	for (std::vector<unsigned int>::iterator it = vertcnt.begin(); it != vertcnt.end(); ++inor) {
-	//#else
-	//std::vector<IfcVector3>::const_iterator vit = verts.begin();
-	//for (std::vector<unsigned int>::const_iterator it = vertcnt.begin(); it != vertcnt.end(); ++inor) {
-	//#endif
 		const unsigned int pcount = *it;
 		
 		if (normals[inor].SquareLength() < 1e-5f) {
@@ -314,6 +312,13 @@ void TempMesh::RemoveAdjacentDuplicates()
 	if(drop) {
 		IFCImporter::LogDebug("removing duplicate vertices");
 	}
+}
+
+// ------------------------------------------------------------------------------------------------
+void TempMesh::Swap(TempMesh& other)
+{
+	vertcnt.swap(other.vertcnt);
+	verts.swap(other.verts);
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -564,6 +569,7 @@ void ConvertTransformOperator(IfcMatrix4& out, const IfcCartesianTransformationO
 
 	out = locm * out * s;
 }
+
 
 } // ! IFC
 } // ! Assimp

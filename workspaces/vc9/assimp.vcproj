@@ -83,68 +83,6 @@
 			/>
 		</Configuration>
 		<Configuration
-			Name="debug|x64"
-			OutputDirectory="./../../lib/$(ProjectName)_$(ConfigurationName)_$(PlatformName)"
-			IntermediateDirectory="./../../obj/$(ProjectName)_$(ConfigurationName)_$(PlatformName)"
-			ConfigurationType="4"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				TargetEnvironment="3"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				Optimization="0"
-				AdditionalIncludeDirectories="..\..\contrib\unzip"
-				PreprocessorDefinitions="DEBUG, _SCL_SECURE_NO_WARNINGS, _CRT_SECURE_NO_WARNINGS,WIN32"
-				BasicRuntimeChecks="3"
-				SmallerTypeCheck="true"
-				RuntimeLibrary="3"
-				EnableFunctionLevelLinking="true"
-				WarningLevel="3"
-				DebugInformationFormat="3"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
 			Name="release|Win32"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="4"
@@ -184,72 +122,6 @@
 				PrecompiledHeaderThrough="AssimpPCH.h"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="false"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
-			Name="release|x64"
-			ConfigurationType="4"
-			InheritedPropertySheets=".\shared\LibShared.vsprops"
-			WholeProgramOptimization="0"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				TargetEnvironment="3"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				InlineFunctionExpansion="2"
-				EnableIntrinsicFunctions="true"
-				FavorSizeOrSpeed="1"
-				AdditionalIncludeDirectories="..\..\contrib\unzip"
-				PreprocessorDefinitions="NDEBUG, _SCL_SECURE_NO_WARNINGS, _CRT_SECURE_NO_WARNINGS,WIN32"
-				StringPooling="true"
-				RuntimeLibrary="2"
-				BufferSecurityCheck="false"
-				EnableEnhancedInstructionSet="0"
-				FloatingPointModel="2"
-				UsePrecompiledHeader="2"
-				PrecompiledHeaderThrough="AssimpPCH.h"
-				WarningLevel="3"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -359,81 +231,6 @@
 			/>
 		</Configuration>
 		<Configuration
-			Name="release-dll|x64"
-			ConfigurationType="2"
-			InheritedPropertySheets=".\shared\DllShared.vsprops"
-			WholeProgramOptimization="0"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				TargetEnvironment="3"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				Optimization="3"
-				InlineFunctionExpansion="2"
-				EnableIntrinsicFunctions="true"
-				FavorSizeOrSpeed="1"
-				AdditionalIncludeDirectories="..\..\contrib\unzip"
-				PreprocessorDefinitions="NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32;ASSIMP_BUILD_DLL_EXPORT"
-				StringPooling="true"
-				RuntimeLibrary="2"
-				BufferSecurityCheck="false"
-				EnableEnhancedInstructionSet="0"
-				FloatingPointModel="2"
-				WarningLevel="3"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\Assimp64.dll"
-				ImportLibrary="$(SolutionDir)..\..\lib\$(ProjectName)_$(ConfigurationName)_$(PlatformName)\assimp.lib"
-				TargetMachine="17"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCManifestTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCAppVerifierTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-				CommandLine="mkdir &quot;$(SolutionDir)..\..\bin\unit_$(ConfigurationName)_$(PlatformName)&quot;&#x0D;&#x0A;mkdir &quot;$(SolutionDir)..\..\bin\assimpview_$(ConfigurationName)_$(PlatformName)&quot;&#x0D;&#x0A;mkdir &quot;$(SolutionDir)..\..\bin\assimpcmd_$(ConfigurationName)_$(PlatformName)&quot;&#x0D;&#x0A;&#x0D;&#x0A;copy &quot;$(OutDir)\$(TargetFileName)&quot; &quot;$(SolutionDir)..\..\bin\unit_$(ConfigurationName)_$(PlatformName)\&quot;&#x0D;&#x0A;copy &quot;$(OutDir)\$(TargetFileName)&quot; &quot;$(SolutionDir)..\..\bin\assimpview_$(ConfigurationName)_$(PlatformName)\&quot;&#x0D;&#x0A;copy &quot;$(OutDir)\$(TargetFileName)&quot; &quot;$(SolutionDir)..\..\bin\assimpcmd_$(ConfigurationName)_$(PlatformName)\&quot;&#x0D;&#x0A;"
-			/>
-		</Configuration>
-		<Configuration
 			Name="debug-dll|Win32"
 			ConfigurationType="2"
 			InheritedPropertySheets=".\shared\DllShared.vsprops;.\shared\FastSTL.vsprops"
@@ -485,6 +282,471 @@
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
 				ImportLibrary="$(SolutionDir)..\..\lib\$(ProjectName)_$(ConfigurationName)_$(PlatformName)\assimp.lib"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="mkdir &quot;$(SolutionDir)..\..\bin\unit_$(ConfigurationName)_$(PlatformName)&quot;&#x0D;&#x0A;mkdir &quot;$(SolutionDir)..\..\bin\assimpview_$(ConfigurationName)_$(PlatformName)&quot;&#x0D;&#x0A;mkdir &quot;$(SolutionDir)..\..\bin\assimpcmd_$(ConfigurationName)_$(PlatformName)&quot;&#x0D;&#x0A;&#x0D;&#x0A;copy &quot;$(OutDir)\$(TargetFileName)&quot; &quot;$(SolutionDir)..\..\bin\unit_$(ConfigurationName)_$(PlatformName)\&quot;&#x0D;&#x0A;copy &quot;$(OutDir)\$(TargetFileName)&quot; &quot;$(SolutionDir)..\..\bin\assimpview_$(ConfigurationName)_$(PlatformName)\&quot;&#x0D;&#x0A;copy &quot;$(OutDir)\$(TargetFileName)&quot; &quot;$(SolutionDir)..\..\bin\assimpcmd_$(ConfigurationName)_$(PlatformName)\&quot;&#x0D;&#x0A;"
+			/>
+		</Configuration>
+		<Configuration
+			Name="release-noboost-st|Win32"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\shared\LibShared.vsprops;.\shared\NoBoostShared.vsprops;.\shared\FastSTL.vsprops"
+			WholeProgramOptimization="0"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="true"
+				FavorSizeOrSpeed="0"
+				OmitFramePointers="true"
+				AdditionalIncludeDirectories="..\..\contrib\unzip"
+				PreprocessorDefinitions="NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32;ASSIMP_BUILD_BOOST_WORKAROUND"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				BufferSecurityCheck="false"
+				EnableEnhancedInstructionSet="2"
+				FloatingPointModel="2"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderThrough="AssimpPCH.h"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="false"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="debug-noboost-st|Win32"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\shared\LibShared.vsprops;.\shared\NoBoostShared.vsprops;.\shared\FastSTL.vsprops"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\..\contrib\unzip"
+				PreprocessorDefinitions="DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32;ASSIMP_BUILD_BOOST_WORKAROUND"
+				BasicRuntimeChecks="3"
+				SmallerTypeCheck="true"
+				RuntimeLibrary="3"
+				EnableFunctionLevelLinking="true"
+				FloatingPointModel="2"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderThrough="AssimpPCH.h"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="false"
+				DebugInformationFormat="4"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="debug-st|Win32"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\shared\LibShared.vsprops;.\shared\SingleThreadedShared.vsprops;.\shared\FastSTL.vsprops"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\..\contrib\unzip"
+				PreprocessorDefinitions="DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32"
+				BasicRuntimeChecks="3"
+				SmallerTypeCheck="true"
+				RuntimeLibrary="3"
+				EnableFunctionLevelLinking="true"
+				FloatingPointModel="2"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderThrough="AssimpPCH.h"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="false"
+				DebugInformationFormat="4"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="release-st|Win32"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\shared\LibShared.vsprops;.\shared\SingleThreadedShared.vsprops;.\shared\FastSTL.vsprops"
+			WholeProgramOptimization="0"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="true"
+				FavorSizeOrSpeed="0"
+				OmitFramePointers="true"
+				AdditionalIncludeDirectories="..\..\contrib\unzip"
+				PreprocessorDefinitions="NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				BufferSecurityCheck="false"
+				EnableEnhancedInstructionSet="2"
+				FloatingPointModel="2"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderThrough="AssimpPCH.h"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="false"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="debug|x64"
+			OutputDirectory="./../../lib/$(ProjectName)_$(ConfigurationName)_$(PlatformName)"
+			IntermediateDirectory="./../../obj/$(ProjectName)_$(ConfigurationName)_$(PlatformName)"
+			ConfigurationType="4"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TargetEnvironment="3"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\..\contrib\unzip"
+				PreprocessorDefinitions="DEBUG, _SCL_SECURE_NO_WARNINGS, _CRT_SECURE_NO_WARNINGS,WIN32"
+				BasicRuntimeChecks="3"
+				SmallerTypeCheck="true"
+				RuntimeLibrary="3"
+				EnableFunctionLevelLinking="true"
+				WarningLevel="3"
+				DebugInformationFormat="3"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="release|x64"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\shared\LibShared.vsprops"
+			WholeProgramOptimization="0"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TargetEnvironment="3"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="true"
+				FavorSizeOrSpeed="1"
+				AdditionalIncludeDirectories="..\..\contrib\unzip"
+				PreprocessorDefinitions="NDEBUG, _SCL_SECURE_NO_WARNINGS, _CRT_SECURE_NO_WARNINGS,WIN32"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				BufferSecurityCheck="false"
+				EnableEnhancedInstructionSet="0"
+				FloatingPointModel="2"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderThrough="AssimpPCH.h"
+				WarningLevel="3"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="release-dll|x64"
+			ConfigurationType="2"
+			InheritedPropertySheets=".\shared\DllShared.vsprops"
+			WholeProgramOptimization="0"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TargetEnvironment="3"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="3"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="true"
+				FavorSizeOrSpeed="1"
+				AdditionalIncludeDirectories="..\..\contrib\unzip"
+				PreprocessorDefinitions="NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32;ASSIMP_BUILD_DLL_EXPORT"
+				StringPooling="true"
+				RuntimeLibrary="2"
+				BufferSecurityCheck="false"
+				EnableEnhancedInstructionSet="0"
+				FloatingPointModel="2"
+				WarningLevel="3"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLinkerTool"
+				OutputFile="$(OutDir)\Assimp64.dll"
+				ImportLibrary="$(SolutionDir)..\..\lib\$(ProjectName)_$(ConfigurationName)_$(PlatformName)\assimp.lib"
+				TargetMachine="17"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -581,73 +843,6 @@
 			/>
 		</Configuration>
 		<Configuration
-			Name="release-noboost-st|Win32"
-			ConfigurationType="4"
-			InheritedPropertySheets=".\shared\LibShared.vsprops;.\shared\NoBoostShared.vsprops;.\shared\FastSTL.vsprops"
-			WholeProgramOptimization="0"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				InlineFunctionExpansion="2"
-				EnableIntrinsicFunctions="true"
-				FavorSizeOrSpeed="0"
-				OmitFramePointers="true"
-				AdditionalIncludeDirectories="..\..\contrib\unzip"
-				PreprocessorDefinitions="NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32;ASSIMP_BUILD_BOOST_WORKAROUND"
-				StringPooling="true"
-				RuntimeLibrary="2"
-				BufferSecurityCheck="false"
-				EnableEnhancedInstructionSet="2"
-				FloatingPointModel="2"
-				UsePrecompiledHeader="2"
-				PrecompiledHeaderThrough="AssimpPCH.h"
-				WarningLevel="3"
-				Detect64BitPortabilityProblems="false"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
 			Name="release-noboost-st|x64"
 			ConfigurationType="4"
 			InheritedPropertySheets=".\shared\LibShared.vsprops;.\shared\NoBoostShared.vsprops"
@@ -683,70 +878,6 @@
 				UsePrecompiledHeader="2"
 				PrecompiledHeaderThrough="AssimpPCH.h"
 				WarningLevel="3"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
-			Name="debug-noboost-st|Win32"
-			ConfigurationType="4"
-			InheritedPropertySheets=".\shared\LibShared.vsprops;.\shared\NoBoostShared.vsprops;.\shared\FastSTL.vsprops"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				Optimization="0"
-				AdditionalIncludeDirectories="..\..\contrib\unzip"
-				PreprocessorDefinitions="DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32;ASSIMP_BUILD_BOOST_WORKAROUND"
-				BasicRuntimeChecks="3"
-				SmallerTypeCheck="true"
-				RuntimeLibrary="3"
-				EnableFunctionLevelLinking="true"
-				FloatingPointModel="2"
-				UsePrecompiledHeader="2"
-				PrecompiledHeaderThrough="AssimpPCH.h"
-				WarningLevel="3"
-				Detect64BitPortabilityProblems="false"
-				DebugInformationFormat="4"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -838,70 +969,6 @@
 			/>
 		</Configuration>
 		<Configuration
-			Name="debug-st|Win32"
-			ConfigurationType="4"
-			InheritedPropertySheets=".\shared\LibShared.vsprops;.\shared\SingleThreadedShared.vsprops;.\shared\FastSTL.vsprops"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				Optimization="0"
-				AdditionalIncludeDirectories="..\..\contrib\unzip"
-				PreprocessorDefinitions="DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32"
-				BasicRuntimeChecks="3"
-				SmallerTypeCheck="true"
-				RuntimeLibrary="3"
-				EnableFunctionLevelLinking="true"
-				FloatingPointModel="2"
-				UsePrecompiledHeader="2"
-				PrecompiledHeaderThrough="AssimpPCH.h"
-				WarningLevel="3"
-				Detect64BitPortabilityProblems="false"
-				DebugInformationFormat="4"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
 			Name="debug-st|x64"
 			ConfigurationType="4"
 			InheritedPropertySheets=".\shared\LibShared.vsprops;.\shared\SingleThreadedShared.vsprops"
@@ -933,73 +1000,6 @@
 				EnableFunctionLevelLinking="true"
 				WarningLevel="3"
 				DebugInformationFormat="3"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
-			Name="release-st|Win32"
-			ConfigurationType="4"
-			InheritedPropertySheets=".\shared\LibShared.vsprops;.\shared\SingleThreadedShared.vsprops;.\shared\FastSTL.vsprops"
-			WholeProgramOptimization="0"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				InlineFunctionExpansion="2"
-				EnableIntrinsicFunctions="true"
-				FavorSizeOrSpeed="0"
-				OmitFramePointers="true"
-				AdditionalIncludeDirectories="..\..\contrib\unzip"
-				PreprocessorDefinitions="NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;WIN32"
-				StringPooling="true"
-				RuntimeLibrary="2"
-				BufferSecurityCheck="false"
-				EnableEnhancedInstructionSet="2"
-				FloatingPointModel="2"
-				UsePrecompiledHeader="2"
-				PrecompiledHeaderThrough="AssimpPCH.h"
-				WarningLevel="3"
-				Detect64BitPortabilityProblems="false"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -1968,6 +1968,10 @@
 					Name="ifc"
 					>
 					<File
+						RelativePath="..\..\code\IfcBoolean.cpp"
+						>
+					</File>
+					<File
 						RelativePath="..\..\code\IFCCurve.cpp"
 						>
 					</File>
@@ -1985,6 +1989,10 @@
 					</File>
 					<File
 						RelativePath="..\..\code\IFCMaterial.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\IFCOpenings.cpp"
 						>
 					</File>
 					<File
@@ -2020,23 +2028,19 @@
 						>
 					</File>
 					<File
+						RelativePath="..\..\code\STEPFileEncoding.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\STEPFileEncoding.h"
+						>
+					</File>
+					<File
 						RelativePath="..\..\code\STEPFileReader.cpp"
 						>
 					</File>
 					<File
 						RelativePath="..\..\code\STEPFileReader.h"
-						>
-					</File>
-				</Filter>
-				<Filter
-					Name="m3"
-					>
-					<File
-						RelativePath="..\..\code\M3Importer.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\code\M3Importer.h"
 						>
 					</File>
 				</Filter>
@@ -2049,6 +2053,110 @@
 					</File>
 					<File
 						RelativePath="..\..\code\XGLLoader.h"
+						>
+					</File>
+				</Filter>
+				<Filter
+					Name="fbx"
+					>
+					<File
+						RelativePath="..\..\code\FBXAnimation.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXBinaryTokenizer.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXCompileConfig.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXConverter.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXConverter.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXDeformer.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXDocument.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXDocument.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXDocumentUtil.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXDocumentUtil.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXImporter.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXImporter.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXImportSettings.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXMaterial.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXMeshGeometry.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXModel.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXNodeAttribute.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXParser.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXParser.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXProperties.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXProperties.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXTokenizer.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXTokenizer.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXUtil.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\code\FBXUtil.h"
 						>
 					</File>
 				</Filter>
@@ -2188,14 +2296,6 @@
 						/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="release|x64"
-						>
-						<Tool
-							Name="VCCLCompilerTool"
-							UsePrecompiledHeader="0"
-						/>
-					</FileConfiguration>
-					<FileConfiguration
 						Name="release-dll|Win32"
 						>
 						<Tool
@@ -2220,14 +2320,6 @@
 						/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="release-noboost-st|x64"
-						>
-						<Tool
-							Name="VCCLCompilerTool"
-							UsePrecompiledHeader="0"
-						/>
-					</FileConfiguration>
-					<FileConfiguration
 						Name="debug-noboost-st|Win32"
 						>
 						<Tool
@@ -2245,6 +2337,22 @@
 					</FileConfiguration>
 					<FileConfiguration
 						Name="release-st|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="release|x64"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="release-noboost-st|x64"
 						>
 						<Tool
 							Name="VCCLCompilerTool"
@@ -2386,14 +2494,6 @@
 						/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="release|x64"
-						>
-						<Tool
-							Name="VCCLCompilerTool"
-							UsePrecompiledHeader="1"
-						/>
-					</FileConfiguration>
-					<FileConfiguration
 						Name="release-dll|Win32"
 						>
 						<Tool
@@ -2421,14 +2521,6 @@
 						/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="release-noboost-st|x64"
-						>
-						<Tool
-							Name="VCCLCompilerTool"
-							UsePrecompiledHeader="1"
-						/>
-					</FileConfiguration>
-					<FileConfiguration
 						Name="debug-noboost-st|Win32"
 						>
 						<Tool
@@ -2453,6 +2545,22 @@
 							Name="VCCLCompilerTool"
 							UsePrecompiledHeader="1"
 							PrecompiledHeaderThrough="AssimpPCH.h"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="release|x64"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="1"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="release-noboost-st|x64"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="1"
 						/>
 					</FileConfiguration>
 					<FileConfiguration
@@ -2763,23 +2871,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -2795,23 +2887,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -2827,23 +2903,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -2859,7 +2919,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -2867,7 +2927,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -2907,23 +3015,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -2939,23 +3031,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -2971,23 +3047,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3003,7 +3063,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3011,7 +3071,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3039,23 +3147,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3071,23 +3163,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3103,23 +3179,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3135,7 +3195,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3143,7 +3203,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3179,23 +3287,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3211,23 +3303,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3243,23 +3319,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3275,7 +3335,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3283,7 +3343,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3319,23 +3427,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3351,23 +3443,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3383,23 +3459,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3415,7 +3475,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3423,7 +3483,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3455,23 +3563,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3487,23 +3579,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3519,23 +3595,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3551,7 +3611,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3559,7 +3619,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3591,23 +3699,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3623,23 +3715,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3655,23 +3731,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3687,7 +3747,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3695,7 +3755,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3727,23 +3835,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3759,23 +3851,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3791,23 +3867,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3823,7 +3883,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3831,7 +3891,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3875,23 +3983,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3907,23 +3999,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3939,23 +4015,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3971,7 +4031,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -3979,7 +4039,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4015,23 +4123,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4047,23 +4139,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4079,23 +4155,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4111,7 +4171,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4119,7 +4179,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4155,23 +4263,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4187,23 +4279,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4219,23 +4295,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4251,7 +4311,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4259,7 +4319,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4291,23 +4399,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4323,23 +4415,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4355,23 +4431,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4387,7 +4447,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4395,7 +4455,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4431,23 +4539,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4463,23 +4555,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4495,23 +4571,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4527,7 +4587,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4535,7 +4595,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4567,23 +4675,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4599,23 +4691,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4631,23 +4707,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4663,7 +4723,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4671,7 +4731,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4703,23 +4811,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4735,23 +4827,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4767,23 +4843,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4799,7 +4859,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4807,7 +4867,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4847,23 +4955,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="release|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4879,23 +4971,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-dll|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-dll|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-dll|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4911,23 +4987,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-noboost-st|x64"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
 							Name="debug-noboost-st|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="debug-noboost-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4943,7 +5003,7 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="debug-st|x64"
+							Name="release-st|Win32"
 							>
 							<Tool
 								Name="VCCLCompilerTool"
@@ -4951,7 +5011,55 @@
 							/>
 						</FileConfiguration>
 						<FileConfiguration
-							Name="release-st|Win32"
+							Name="debug|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-dll|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="release-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-noboost-st|x64"
+							>
+							<Tool
+								Name="VCCLCompilerTool"
+								UsePrecompiledHeader="0"
+							/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="debug-st|x64"
 							>
 							<Tool
 								Name="VCCLCompilerTool"

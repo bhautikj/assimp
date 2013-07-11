@@ -41,6 +41,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "stdafx.h"
 #include "assimp_view.h"
+#include <Windowsx.h>
 
 namespace AssimpView {
 
@@ -984,7 +985,7 @@ void OpenAsset()
 void SetupPPUIState()
 {
 	
-	// fucking hell, that's ugly. anyone willing to rewrite me from scratch?
+	// that's ugly. anyone willing to rewrite me from scratch?
 	HMENU hMenu = GetMenu(g_hDlg);
 	CheckMenuItem(hMenu,ID_VIEWER_PP_JIV,ppsteps & aiProcess_JoinIdenticalVertices ? MF_CHECKED : MF_UNCHECKED);
 	CheckMenuItem(hMenu,ID_VIEWER_PP_CTS,ppsteps & aiProcess_CalcTangentSpace ? MF_CHECKED : MF_UNCHECKED);
@@ -1815,6 +1816,16 @@ INT_PTR CALLBACK MessageProc(HWND hwndDlg,UINT uMsg,
 				PostQuitMessage(0);
 				DestroyWindow(hwndDlg);
 				}
+			else if (IDC_COMBO1 == LOWORD(wParam))
+			{
+				if(HIWORD(wParam) == CBN_SELCHANGE) {
+					const size_t sel = static_cast<size_t>(ComboBox_GetCurSel(GetDlgItem(hwndDlg,IDC_COMBO1)));
+					if(g_pcAsset) {
+						g_pcAsset->mAnimator->SetAnimIndex(sel);
+						SendDlgItemMessage(hwndDlg,IDC_SLIDERANIM,TBM_SETPOS,TRUE,0);
+					}
+				}
+			}
 			else if (ID_VIEWER_RESETVIEW == LOWORD(wParam))
 				{
 				g_sCamera.vPos = aiVector3D(0.0f,0.0f,-10.0f);
@@ -1905,7 +1916,7 @@ INT_PTR CALLBACK MessageProc(HWND hwndDlg,UINT uMsg,
 					}
 				}
 
-			// fucking hell, this is ugly. anyone willing to rewrite it from scratch using wxwidgets or similar?
+			// this is ugly. anyone willing to rewrite it from scratch using wxwidgets or similar?
 			else if (ID_VIEWER_PP_JIV == LOWORD(wParam))	{
 				ppsteps ^= aiProcess_JoinIdenticalVertices;
 				CheckMenuItem(hMenu,ID_VIEWER_PP_JIV,ppsteps & aiProcess_JoinIdenticalVertices ? MF_CHECKED : MF_UNCHECKED);
